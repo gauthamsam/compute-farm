@@ -1,0 +1,24 @@
+<html>
+<body>
+	<h3>Instructions:</h3>
+	<ol style="line-height: 30px">
+		<li>Install 'ant' if it is not already installed in your computer.</li>
+		<li>Make sure your JAVA_HOME environment variable corresponds to the latest jdk installation.</li>
+		<li>Make sure that the ANT_HOME environment variable is set properly.</li>
+		<li>Navigate to the directory that contains your source folder (src), build.xml file and policy file.</li>
+		<li>Make sure that your build file has the correct file paths and codebase paths.</li>
+		<li>Make sure that the client has the appropriate permissions to download the necessary files from the server's codebase and vice versa.</li>
+		<li>In the build file, make sure you have the correct IP/domain name of the remote server as program arguments for the target named "runClient"</li>
+		<li>Now, run 'ant your_build_file_name'</li>
+		<li>If the build is successful, you can now see two additional folders - "build" and "dist" and the appropriate jar files created. <br/>
+		    If it is not, make sure you followed the above steps correctly.</li>
+		<li>If you're going to run the server on the same machine, open a new terminal window. Otherwise, open ssh connections to the desired remote servers for the Computer(s) and Space. <br/>
+		    If you're using CSIL machines, you don't have to copy the computer.jar file on to the server as all the machines use the same shared storage. <br/>
+		    Otherwise, copy them over. </li>
+		<li>Now, from the ComputeServer terminal windows, run "ant runComputer". This will start the Computers.</li>
+		<li>From the other terminal window, run "ant runClient". This will start the client which will start executing the jobs.</li>
+		<li>After the tasks are executed, you must be able to see the results displayed in a GUI. <br/>
+		    If you are connected to the client machine via ssh, make sure X11 Forwarding is enabled for that connection (ssh -X) so that you can see the results.</li>		
+	</ol>
+</body>
+</html>
